@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o31-1p-xsp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Distance Traveled-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-G3-Gwe">
+                                <rect key="frame" x="20" y="136" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wag-6x-IXh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxJ-4q-BYb">
+                                <rect key="frame" x="362" y="136" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9i-JM-RZW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Traveled: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4b-yp-Kfg">
+                                <rect key="frame" x="20" y="174" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearest Hospital: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-Br-upI">
+                                <rect key="frame" x="20" y="203" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-EE-KoX">
+                                <rect key="frame" x="20" y="232" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Xy-UB-HDz">
+                                <rect key="frame" x="0.0" y="261" width="414" height="635"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C4b-yp-Kfg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="71a-tK-7QH"/>
+                            <constraint firstItem="jcX-Br-upI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8zr-l6-585"/>
+                            <constraint firstItem="jcX-Br-upI" firstAttribute="top" secondItem="C4b-yp-Kfg" secondAttribute="bottom" constant="8" symbolic="YES" id="BMO-UT-c9k"/>
+                            <constraint firstItem="VxJ-4q-BYb" firstAttribute="centerY" secondItem="dGB-G3-Gwe" secondAttribute="centerY" id="Sf4-8d-N3w"/>
+                            <constraint firstItem="7Xy-UB-HDz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TuU-KL-U31"/>
+                            <constraint firstItem="bwm-EE-KoX" firstAttribute="top" secondItem="jcX-Br-upI" secondAttribute="bottom" constant="8" symbolic="YES" id="UnC-3U-ALP"/>
+                            <constraint firstItem="7Xy-UB-HDz" firstAttribute="top" secondItem="bwm-EE-KoX" secondAttribute="bottom" constant="8" symbolic="YES" id="Y5h-jK-HmT"/>
+                            <constraint firstItem="C4b-yp-Kfg" firstAttribute="top" secondItem="dGB-G3-Gwe" secondAttribute="bottom" constant="8" symbolic="YES" id="YaG-cC-sk5"/>
+                            <constraint firstItem="dGB-G3-Gwe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aYD-ME-OKu"/>
+                            <constraint firstItem="dGB-G3-Gwe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="bFX-zf-HGr"/>
+                            <constraint firstAttribute="bottom" secondItem="7Xy-UB-HDz" secondAttribute="bottom" id="bNA-BB-6Oz"/>
+                            <constraint firstItem="bwm-EE-KoX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="esj-M5-kxv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Xy-UB-HDz" secondAttribute="trailing" id="iGu-Pr-9Ng"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VxJ-4q-BYb" secondAttribute="trailing" constant="20" id="p3R-VU-oms"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Distance Traveled" prompt="Health App" id="Qgz-g7-mML"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="bwm-EE-KoX" id="lYX-Lm-gfz"/>
+                        <outlet property="distanceTraveledLabel" destination="C4b-yp-Kfg" id="qt8-31-HeF"/>
+                        <outlet property="mapView" destination="7Xy-UB-HDz" id="5CK-Hx-51q"/>
+                        <outlet property="nearestHospitalLabel" destination="jcX-Br-upI" id="AvF-aL-t2b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sbu-GC-qQt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o31-1p-xsp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8kj-ry-hnn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a91-Yv-zxg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmU-zA-s5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

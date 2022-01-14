@@ -1,0 +1,3 @@
+[submodule "assignments/Final Project/YikYak"]
+	path = assignments/Final Project/YikYak
+	url = git@github.com:Eastonco/YikYak.git

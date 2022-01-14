@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mj6-78-6RL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connor's Happy Quotes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCG-fp-3XS">
+                                <rect key="frame" x="191" y="832" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="NextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2RX-pU-Rx5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Quotation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-q5-Kpg">
+                                <rect key="frame" x="155.5" y="438" width="103" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DEI-q5-Kpg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6kp-PY-fsu"/>
+                            <constraint firstItem="DEI-q5-Kpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FgR-HW-Bcv"/>
+                            <constraint firstItem="dCG-fp-3XS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kE5-Qp-GrK"/>
+                            <constraint firstItem="dCG-fp-3XS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zBO-XY-bpY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Connor's Happy Quotes" prompt="Health App" id="ysh-vp-RIW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1mV-Bq-vJz">
+                            <connections>
+                                <segue destination="bFm-EL-rcg" kind="show" identifier="NewQuoteSegue" id="VTK-aX-14x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="quoteDisplay" destination="DEI-q5-Kpg" id="n0p-Vc-C28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439.1304347826087" y="114.50892857142857"/>
+        </scene>
+        <!--Add Quotation-->
+        <scene sceneID="hUR-vb-i2g">
+            <objects>
+                <viewController id="bFm-EL-rcg" customClass="AddQuotationViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LeC-NF-g7S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotation #n" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30V-j3-uu9">
+                                <rect key="frame" x="157" y="138" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcG-AK-JgZ">
+                                <rect key="frame" x="20" y="197.5" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="koF-dB-tHd">
+                                <rect key="frame" x="84" y="191" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ov4-eg-tdO">
+                                <rect key="frame" x="84" y="245" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-TE-5a4">
+                                <rect key="frame" x="20" y="251.5" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uvB-fm-jXa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ohv-TE-5a4" firstAttribute="centerY" secondItem="ov4-eg-tdO" secondAttribute="centerY" id="02c-pA-4Hb"/>
+                            <constraint firstItem="ohv-TE-5a4" firstAttribute="leading" secondItem="uvB-fm-jXa" secondAttribute="leading" constant="20" id="3dJ-kE-2CT"/>
+                            <constraint firstItem="30V-j3-uu9" firstAttribute="top" secondItem="uvB-fm-jXa" secondAttribute="top" constant="16" id="7JL-yP-Mlg"/>
+                            <constraint firstItem="tcG-AK-JgZ" firstAttribute="leading" secondItem="uvB-fm-jXa" secondAttribute="leading" constant="20" id="FUL-Mf-hCj"/>
+                            <constraint firstItem="ov4-eg-tdO" firstAttribute="top" secondItem="koF-dB-tHd" secondAttribute="bottom" constant="20" id="GAO-g5-SmI"/>
+                            <constraint firstItem="30V-j3-uu9" firstAttribute="centerX" secondItem="LeC-NF-g7S" secondAttribute="centerX" id="I5L-fu-r0l"/>
+                            <constraint firstItem="koF-dB-tHd" firstAttribute="width" secondItem="ov4-eg-tdO" secondAttribute="width" id="InF-SE-a4Y"/>
+                            <constraint firstItem="koF-dB-tHd" firstAttribute="top" secondItem="30V-j3-uu9" secondAttribute="bottom" constant="32" id="OUh-98-N9l"/>
+                            <constraint firstItem="ov4-eg-tdO" firstAttribute="leading" secondItem="ohv-TE-5a4" secondAttribute="trailing" constant="8" symbolic="YES" id="TI3-Rg-EnH"/>
+                            <constraint firstItem="uvB-fm-jXa" firstAttribute="trailing" secondItem="ov4-eg-tdO" secondAttribute="trailing" constant="20" id="VzI-or-NWa"/>
+                            <constraint firstItem="uvB-fm-jXa" firstAttribute="trailing" secondItem="koF-dB-tHd" secondAttribute="trailing" constant="20" id="anN-ja-nfz"/>
+                            <constraint firstItem="koF-dB-tHd" firstAttribute="leading" secondItem="tcG-AK-JgZ" secondAttribute="trailing" constant="12" id="p2k-Og-yGD"/>
+                            <constraint firstItem="tcG-AK-JgZ" firstAttribute="centerY" secondItem="koF-dB-tHd" secondAttribute="centerY" id="wtQ-Yj-hRz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Quotation" prompt="Health App" id="22j-FT-ZBu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FKY-5G-neS">
+                            <connections>
+                                <segue destination="F3M-Nd-aUP" kind="unwind" identifier="cancelUnwind" unwindAction="unwindFromSecondViewWithSender:" id="Rmm-j7-8V3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sHn-XM-OC6">
+                            <connections>
+                                <action selector="SavedTapped:" destination="bFm-EL-rcg" id="Nor-dx-k2C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorField" destination="ov4-eg-tdO" id="nf3-cd-4fA"/>
+                        <outlet property="quoteCountLabel" destination="30V-j3-uu9" id="4rY-va-nWP"/>
+                        <outlet property="quoteField" destination="koF-dB-tHd" id="Wh3-Lg-uFr"/>
+                        <segue destination="F3M-Nd-aUP" kind="unwind" identifier="saveUnwind" unwindAction="unwindFromSecondViewWithSender:" id="DPm-a9-gXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycQ-6C-qPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="F3M-Nd-aUP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2298.5507246376815" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1qQ-dU-lDA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mj6-78-6RL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NmT-ms-H4i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jfd-WJ-xeH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXe-IA-Keo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.98550724637687" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
